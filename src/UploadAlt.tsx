@@ -64,19 +64,17 @@ function UploadAlt() {
             Upload
             </Button>
             <Modal
-            title="Confirmation"
-            visible={isModalVisible}
-            onOk={handleSubmit}
-            onCancel={handleCancel}>
+              title="Confirmation"
+              visible={isModalVisible}
+              onOk={handleSubmit}
+              onCancel={handleCancel}>
+              style={{
+                overflow: 'auto',
+                borderRadius: '10px',
+                backgroundColor: '#1890ff',
+              }}
             <p>Are you sure to upload the following file?</p>
             {fileData && <p>File: {fileData.name}</p>}
-            <p
-                style={{
-                paddingTop: "8px",
-                fontFamily: "Arial",
-                fontWeight: "bold"
-                }}>
-            </p>
             </Modal>
         </Card>
     </div>
