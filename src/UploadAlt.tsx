@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "antd/dist/antd.css";
 import axios from "axios";
 import { Card, Button, Modal } from "antd";
-import FileInput from './FileInput.tsx'
+import FileInput from './FileInput'
 
 
 function UploadAlt() {
