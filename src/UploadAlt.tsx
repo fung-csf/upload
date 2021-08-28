@@ -25,10 +25,10 @@ function UploadAlt() {
       };
 
       const handleSubmit = (e) => {
-        let fr = new FileReader();
+        const fr = new FileReader();
         fr.onload = function (e) {
           // e.target.result should contain the text
-          let text = e.target.result;
+          const text = e.target.result;
           // encode string to base64
           setfileDataContent(text);
           console.log(fileDataContent);
