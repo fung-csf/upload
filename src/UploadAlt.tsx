@@ -25,11 +25,11 @@ function UploadAlt() {
       };
 
       const handleSubmit = (e) => {
-        var fr = new FileReader();
+        let fr = new FileReader();
         fr.onload = function (e) {
           // e.target.result should contain the text
-          var text = e.target.result;
-          //encode string to base64
+          let text = e.target.result;
+          // encode string to base64
           setfileDataContent(text);
           console.log(fileDataContent);
         };
@@ -37,7 +37,7 @@ function UploadAlt() {
         axios({
           method: "post",
           url: "",
-          //database table with the columns Name, content
+          // database table with the columns Name, content
           data: [{ Name: fileData.name, content: fileDataContent }]
         })
           .then(function (response) {
